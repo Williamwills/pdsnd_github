@@ -155,10 +155,9 @@ def trip_duration_stats(df):
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     mean_travel_time = df['hour'].mean()
 
-    print('mean travel time is: ', mean_travel_time)
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('mean travel time is {}\n This took {} seconds'. format(mean_travel_time, % (time.time() - start_time)))
     print('-'*40)
+    
 
 
 def user_stats(df):
@@ -206,7 +205,7 @@ def main():
         user_stats(df)
         display_raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('Enter yes to restart or no end tour.')
         if restart.lower() != 'yes':
             break
 
