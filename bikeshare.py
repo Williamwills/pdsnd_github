@@ -122,15 +122,11 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # TO DO: display most commonly used start station and emd station
     common_start_station = df['Start Station'].mode()
-
-    print('most commonly used start station is', common_start_station)
-
-    # TO DO: display most commonly used end station
     common_end_station = df['End Station'].mode()
+    print('most commonly used start station is {} \n the most commonly used end station is {}: '.format( common_start_station,common_end_station ) )
 
-    print('most commonly used end station is', common_end_station)
 
     # TO DO: display most frequent combination of start station and end station trip
     combination_stations = df[['Start Station','End Station']].mode()
@@ -156,10 +152,9 @@ def trip_duration_stats(df):
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     mean_travel_time = df['hour'].mean()
 
-    print('mean travel time is: ', mean_travel_time)
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('mean travel time is {}\n This took {} seconds'. format(mean_travel_time, % (time.time() - start_time)))
     print('-'*40)
+
 
 
 def user_stats(df):
@@ -207,7 +202,7 @@ def main():
         user_stats(df)
         display_raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('Enter yes to restart or no end tour.')
         if restart.lower() != 'yes':
             break
 
