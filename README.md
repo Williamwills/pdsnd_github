@@ -8,7 +8,7 @@ Explore bikeshare data
 ### Description
 prompts user to hover around bikeshare data, a company that that let out bicycles.
 it enable user input to filter through data for 3  cities (Chicago, New York City and Washington),
-trips details, customer details and return descriptive statistics
+trips details, customer details and return descriptive statistics on trips, stations and users.
 
 ### Files used
 bikeshare.py
@@ -18,4 +18,3 @@ new_york_city.csv
 
 ### Credits
 Udacity programming for data science nano degree course
-https://chris.beams.io/posts/git-commit/
